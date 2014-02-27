@@ -1,0 +1,36 @@
+#!/usr/bin/env python
+#
+# Copyright 2009 Facebook
+#
+# Licensed under the Apache License, Version 2.0 (the "License"); you may
+# not use this file except in compliance with the License. You may obtain
+# a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+# License for the specific language governing permissions and limitations
+# under the License.
+
+"""The Tornado web server and tools."""
+'''
+在`__init__.py`中主要登记了具体的开发版本信息。
+*   `__future__`是python中的未来模块，会在未来成为build-in的内容。
+*   `absolute_import`: 包含绝对路径.方便include
+*   `division`: 精确的除法
+*   `print_function`: 把print转换成函数print()
+*   `with_statement`: >2.5的版本已经实现了with功能，为了兼容python 2.5
+'''
+from __future__ import absolute_import, division, print_function, with_statement
+
+# version is a human-readable version number.
+
+# version_info is a four-tuple for programmatic comparison. The first
+# three numbers are the components of the version number.  The fourth
+# is zero for an official release, positive for a development branch,
+# or negative for a release candidate or beta (after the base version
+# number has been incremented)
+version = "3.3.dev1"
+version_info = (3, 3, 0, -100)
