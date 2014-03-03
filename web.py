@@ -51,28 +51,36 @@ request.
 """
 
 from __future__ import absolute_import, division, print_function, with_statement
+'''
+在__init__.py中介绍了__future__及对应的包介绍
+'''
 
-
-import base64
-import binascii
-import datetime
-import email.utils
+import base64       #base64编码
+import binascii     #二进制和ascii互转
+import datetime     #时间处理库
+import email.utils  #邮件处理工具类
 import functools
-import gzip
-import hashlib
-import hmac
-import mimetypes
-import numbers
-import os.path
-import re
-import stat
-import sys
-import threading
-import time
-import tornado
-import traceback
-import types
-import uuid
+'''
+functools包含三个函数，partial() | update_wrapper() | wraps()
+*   partial(): 新绑定函数的可选参数，生成一个callable的partial对象
+*   update_wrapper(): 它可以把被封装函数的__name__、__module__、__doc__和 __dict__都复制到封装函数去
+*   wraps(): 装饰器，具体可参考http://www.cnblogs.com/huxi/archive/2011/03/01/1967600.html
+'''
+import gzip         #gzip压缩和解压字符串或文件
+import hashlib      #哈希加密
+import hmac         #用来做哈希消息签名认证
+import mimetypes    #用来做文件/url和MIME类型之间的转换
+import numbers      #定义了更多的数学计算类型和方法
+import os.path      #定义了许多关于文件路径有关的处理方法
+import re           #正则表达式
+import stat         #该模块定义了用来解释os.stat(), os.fstat()和os.lstat()执行结果的一些常量和方法
+import sys          #提供了基于系统的一些参数和方法 TODO：将会写一篇详细介绍sys的学习文档
+import threading    #封装的线程操作接口
+import time         #时间处理模块
+import tornado      
+import traceback    #用来跟踪异常返回信息
+import types        #包含build-in类型名
+import uuid         #生成基于当前主机ID和当前时间的唯一码
 
 from tornado.concurrent import Future
 from tornado import escape
